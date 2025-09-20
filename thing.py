@@ -41,12 +41,12 @@ if st.button("Get Weather"):
             humidity = first_forecast["main"]["humidity"]
             wind_speed = first_forecast["wind"]["speed"]
 
-            st.write(f"Current condition in **{city}**: {desc}")
+            st.write(f"Current weather in **{city}**: {desc}")
 
             # Pick palette (default to gray tones if unknown)
             palette = palettes.get(desc, ["#D3D3D3", "#A9A9A9", "#696969"])
 
-            st.subheader("Mood Color Palette:")
+            st.subheader("Weather Color Palette:")
 
             cols = st.columns(len(palette))
             for i, color in enumerate(palette):
@@ -59,3 +59,4 @@ if st.button("Get Weather"):
         else:
 
             st.error("City not found or API error!")
+
