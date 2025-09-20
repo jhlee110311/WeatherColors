@@ -14,6 +14,7 @@ palettes = {
     "mist": ["#D3D3D3", "#A9A9A9", "#C0C0C0"],
 }
 
+st.set_page_config("Weather Colors", page_icon = "🌤️")
 st.title("🌤️ Find Weather Colors!")
 
 # Input city name
@@ -56,4 +57,5 @@ if st.button("Get Weather"):
                     )
                     st.code(color)  # show hex code          
         else:
+
             st.error("City not found or API error!")
